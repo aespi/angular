@@ -1,0 +1,73 @@
+<div class="product-container">
+  <div class="product-header">
+    <div>{{ productData.title }}</div>
+  </div>
+  <div class="product-content">
+    <div class="product-images">
+      <img [src]="selected.thumb" alt="Product Image" class="main-image" />
+      <div class="thumbnails">
+        <img
+          (click)="selected.thumb = image"
+          *ngFor="let image of productData.thumbnails"
+          [src]="image"
+          alt="Thumbnail"
+          class="thumbnail-image"
+        />
+      </div>
+    </div>
+    <div class="product-details">
+      <div class="description shadow">
+        <h3 style="display: flex; align-items: center; justify-content: space-between">
+          <span>Description</span>
+          <button class="button shadow">Regenerate</button>
+        </h3>
+        <hr style="color: #eee !important; margin-top: 1rem" />
+        <p>
+          {{ productData.desc.main }}<br />
+          {{ productData.desc.detail }}
+        </p>
+
+        <ul
+          style="margin-top: 2rem; padding: 0; display: flex; flex-direction: column; gap: 0.5rem"
+        >
+          <li *ngFor="let pt of productData.desc.bullet | keyvalue">
+            <strong>{{ pt.key }}</strong
+            >:&nbsp;<span>{{ pt.value }}</span>
+          </li>
+        </ul>
+      </div>
+      <div style="display: flex; gap: 1rem; width: 100%">
+        <div class="price-range shadow">
+          <h3 style="display: flex; justify-content: space-between">
+            <span style="margin-bottom: 1rem">Recommended Price Range</span>
+            <span>${{ productData.priceRange.min }} - ${{ productData.priceRange.max }}</span>
+          </h3>
+          <img src="../../assets/price-range.png" alt="price-range" />
+          <span class="start">${{ productData.priceRange.start }}</span>
+          <span class="min">${{ productData.priceRange.min }}</span>
+          <span class="max">${{ productData.priceRange.max }}</span>
+          <span class="end">${{ productData.priceRange.end }}</span>
+        </div>
+        <div class="tags shadow">
+          <h3 style="margin-bottom: 2rem">Recommended Store Cluster</h3>
+          <span
+            *ngFor="let tag of productData.tags"
+            class="tag"
+            [ngClass]="{ active: selected.tag === tag }"
+            >{{ tag }}</span
+          >
+        </div>
+      </div>
+      <div class="recommendations shadow">
+        <h3 style="padding: 0 1rem">Recommended Composition</h3>
+
+        <ul style="padding: 0; display: flex; flex-direction: column; gap: 0.5rem">
+          <li *ngFor="let pt of productData.recommendedComponent | keyvalue">
+            <strong style="margin-right: 2rem">{{ pt.key | titlecase }}</strong
+            ><span>{{ pt.value | titlecase }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

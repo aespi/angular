@@ -4,9 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import { ProdDescComponent } from './prod-desc/prod-desc.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, ProdDescComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
