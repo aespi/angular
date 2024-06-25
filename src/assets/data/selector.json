@@ -1,0 +1,262 @@
+[
+  {
+    "attribute": "Material",
+    "flag": true,
+    "value": "Leather"
+  },
+  {
+    "attribute": "Material",
+    "flag": false,
+    "value": "Mesh"
+  },
+  {
+    "attribute": "Material",
+    "flag": true,
+    "value": "Synthetic"
+  },
+  {
+    "attribute": "Material",
+    "flag": false,
+    "value": "Polyester"
+  },
+  {
+    "attribute": "Material",
+    "flag": false,
+    "value": "Canvas"
+  },
+  {
+    "attribute": "Material",
+    "flag": false,
+    "value": "Textile"
+  },
+  {
+    "attribute": "Material",
+    "flag": false,
+    "value": "Suede"
+  },
+  {
+    "attribute": "Material",
+    "flag": false,
+    "value": "Gore-Tex"
+  },
+  {
+    "attribute": "Closure Type",
+    "flag": true,
+    "value": "Hook and Loop"
+  },
+  {
+    "attribute": "Closure Type",
+    "flag": true,
+    "value": "Buckle"
+  },
+  {
+    "attribute": "Closure Type",
+    "flag": true,
+    "value": "Bungee"
+  },
+  {
+    "attribute": "Closure Type",
+    "flag": true,
+    "value": "Slip-on"
+  },
+  {
+    "attribute": "Closure Type",
+    "flag": true,
+    "value": "Lace-up"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Stability"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Agility"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Touch"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Speed"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Casual"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Power"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Durability"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Neutral"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Cushioning"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Control"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Support"
+  },
+  {
+    "attribute": "Support Type",
+    "flag": false,
+    "value": "Rubber"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Purple"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Silver"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Green"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Pink"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Grey"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Red"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Brown"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Gold"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Black"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Blue"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Yellow"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Teal"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "White"
+  },
+  {
+    "attribute": "Color",
+    "flag": false,
+    "value": "Orange"
+  },
+  {
+    "attribute": "Sole Width",
+    "flag": false,
+    "value": "Wide"
+  },
+  {
+    "attribute": "Sole Width",
+    "flag": false,
+    "value": "Medium"
+  },
+  {
+    "attribute": "Sole Width",
+    "flag": false,
+    "value": "Narrow"
+  },
+  {
+    "attribute": "Sustainability",
+    "flag": false,
+    "value": "Not available"
+  },
+  {
+    "attribute": "Sustainability",
+    "flag": false,
+    "value": "Available"
+  },
+  {
+    "attribute": "Athleisure",
+    "flag": false,
+    "value": "Not available"
+  },
+  {
+    "attribute": "Athleisure",
+    "flag": false,
+    "value": "Available"
+  },
+  {
+    "attribute": "Customization Option",
+    "flag": false,
+    "value": "Not available"
+  },
+  {
+    "attribute": "Customization Option",
+    "flag": false,
+    "value": "Available"
+  },
+  {
+    "attribute": "Tech Enhanced",
+    "flag": false,
+    "value": "Not available"
+  },
+  {
+    "attribute": "Tech Enhanced",
+    "flag": false,
+    "value": "Available"
+  },
+  {
+    "attribute": "Vintage",
+    "flag": false,
+    "value": "Not available"
+  },
+  {
+    "attribute": "Vintage",
+    "flag": false,
+    "value": "Available"
+  }
+]
