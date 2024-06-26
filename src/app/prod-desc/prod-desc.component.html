@@ -1,21 +1,68 @@
 <div class="product-container">
-  <div class="product-header">
-    <div>{{ productData.title }}</div>
+  <div
+    class="product-header"
+    style="width: 100%; display: flex; gap: 1rem; border-bottom: 1px solid #ddd"
+  >
+    <div
+      class="tabs"
+      *ngFor="let tab of recData; index as i"
+      (click)="selectRecom(tab); selectedRedIdx = i"
+      [ngClass]="{ active: selectedRedIdx === i }"
+    >
+      <div>{{ tab['Recommendation'] }}</div>
+    </div>
   </div>
   <div class="product-content">
-    <div class="product-images">
-      <img [src]="selected.thumb" alt="Product Image" class="main-image" />
-      <div class="thumbnails">
-        <img
-          (click)="selected.thumb = image"
-          *ngFor="let image of productData.thumbnails"
-          [src]="image"
-          alt="Thumbnail"
-          class="thumbnail-image"
-        />
+    <div class="left">
+      <div class="product-images">
+        <img [src]="selected.thumb" alt="Product Image" class="main-image" />
+        <div class="thumbnails">
+          <img
+            (click)="selected.thumb = image"
+            *ngFor="let image of productData.thumbnails"
+            [src]="image"
+            alt="Thumbnail"
+            class="thumbnail-image"
+          />
+        </div>
+      </div>
+      <div class="recommendations shadow">
+        <h3 style="padding: 0 1rem">Recommended Composition</h3>
+
+        <ul style="padding: 0; display: flex; flex-direction: column; gap: 0.5rem">
+          <strong>
+            <li clas="header"><span>Component</span> <span>Material</span></li></strong
+          >
+
+          <li *ngFor="let pt of productData.recommendedComponent">
+            <span>{{ pt.component }}</span>
+            <span>{{ pt.Material }}</span>
+          </li>
+        </ul>
       </div>
     </div>
     <div class="product-details">
+      <div
+        class="shadow"
+        style="margin-bottom: 10px; padding: 0.5rem; display: flex; align-items: center"
+      >
+        <span style="margin-right: 10px">{{ recData[selectedRedIdx]?.['Recommendation'] }}: </span>
+        <span class="chips" style="display: flex; gap: 0.5rem; align-items: center">
+          <span
+            *ngFor="let chip of selectedRed"
+            class="chip"
+            style="display: flex; align-items: center"
+          >
+            <span style="margin-right: 10px; display: flex; gap: 2px" *ngIf="chip.color">
+              <span
+                style="height: 10px; width: 10px; border-radius: 100%"
+                [ngStyle]="{ background: chip.color }"
+              ></span
+            ></span>
+            {{ chip.text }}
+          </span>
+        </span>
+      </div>
       <div class="description shadow">
         <h3 style="display: flex; align-items: center; justify-content: space-between">
           <span>Description</span>
@@ -58,15 +105,41 @@
           >
         </div>
       </div>
-      <div class="recommendations shadow">
-        <h3 style="padding: 0 1rem">Recommended Composition</h3>
+      <div style="display: flex; gap: 1rem; width: 100%">
+        <div class="chart-container shadow">
+          <h3>Demand Forecast for 6 months</h3>
 
-        <ul style="padding: 0; display: flex; flex-direction: column; gap: 0.5rem">
-          <li *ngFor="let pt of productData.recommendedComponent | keyvalue">
-            <strong style="margin-right: 2rem">{{ pt.key | titlecase }}</strong
-            ><span>{{ pt.value | titlecase }}</span>
-          </li>
-        </ul>
+          <canvas id="MyChart"></canvas>
+        </div>
+
+        <div class="table-container shadow">
+          <h3>Cannibalization for 6 months</h3>
+          <!-- <app-data-table [data]="tableData"></app-data-table> -->
+          <!-- <table>
+        <thead><tr>
+          <th>col1</th>
+          <th>col2</th>
+          <th>col3</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td>value11</td>
+            <td>value12</td>
+            <td>value13</td>
+          </tr>
+          <tr>
+            <td>value21</td>
+            <td>value22</td>
+            <td>value23</td>
+          </tr>
+          <tr>
+            <td>value31</td>
+            <td>value32</td>
+            <td>value33</td>
+          </tr>
+        </tbody>
+       </table> -->
+        </div>
       </div>
     </div>
   </div>
